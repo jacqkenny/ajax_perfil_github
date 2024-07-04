@@ -37,7 +37,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const nome = document.querySelector("#name")
+            const name = document.querySelector("#name")
             const username = document.querySelector("#username")
             const avatar = document.querySelector("#avatar")
             const repos = document.querySelector("#repos")
@@ -50,13 +50,13 @@
                     return res.json()
                 })
                 .then(function(json) {
-                    nomeElement.innerText = json.name
-                    usernameElement.innerText = json.login
-                    avatarElement.src = json.avatar_url
-                    followingElement.innerText = json.following
-                    followingElement.innerText = json.followers
+                    name.innerText = json.name
+                    username.innerText = json.login
+                    avatar.src = json.avatar_url
+                    following.innerText = json.following
+                    following.innerText = json.followers
                     repos.innerText = json.public_repos
-                    linkElement.href = json.html_url
+                    link.href = json.html_url
                 })
         })
     </script>
